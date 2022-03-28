@@ -44,7 +44,14 @@ iex> body = [%{key: "1", value: "full_name", value_text: "William Darcy"},
              %{key: "2", value: "pin", value_text: "12345"}]
 iex> phone = "62888111000999"
 iex> name = "Bpk. Budi"
-iex> Qontakwa.send_wa_message phone, name
+iex> {:ok, response} = Qontakwa.send_wa_message phone, name, body
+```
+
+With invalid phone number:
+
+```
+iex> phone = "620000INVALID"
+iex> {:error, message} = Qontakwa.send_wa_message phone, name, body
 ```
 
 You should get a message sent to your phone
