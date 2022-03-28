@@ -1,21 +1,43 @@
 # Qontakwa
 
-**TODO: Add description**
+Test project to experiment with Qontak's Whatsapp API 
 
-## Installation
+# Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `qontakwa` to your list of dependencies in `mix.exs`:
+This project assumes you have Elixir version 1.12. If not, please
+install it first.
 
-```elixir
-def deps do
-  [
-    {:qontakwa, "~> 0.1.0"}
-  ]
-end
-```
+Clone this repo to your machine, and then do:
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/qontakwa](https://hexdocs.pm/qontakwa).
+$ cd qontakwa
+$ mix deps.get
+
+## Environment variables:
+
+- Copy the file .env.example to .env
+- Put your Qontak TOKEN in there, and then
+
+$ source .env
+
+## Running the tests:
+
+$ mix test
+
+## Sending WA message
+
+$ iex -S mix
+
+Replace the phone number below with your WA phone number
+
+iex> phone = "62888111000999"
+iex> name = "Bpk. Budi"
+iex> Qontakwa.send_wa_message phone, name
+
+You should get a message sent to your phone
+
+## The End
+Thank you!
+
+
+
 
