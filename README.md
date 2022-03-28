@@ -35,9 +35,13 @@ $ mix test
 $ iex -S mix
 ```
 
-Replace the phone number below with your WA phone number
+Enter the following codes at the iex prompt.
+Replace the phone number below with your real WA phone number 
+if you want to receive a message.
 
 ```
+iex> body = [%{key: "1", value: "full_name", value_text: "William Darcy"},
+             %{key: "2", value: "pin", value_text: "12345"}]
 iex> phone = "62888111000999"
 iex> name = "Bpk. Budi"
 iex> Qontakwa.send_wa_message phone, name
