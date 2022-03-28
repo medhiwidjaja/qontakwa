@@ -40,9 +40,6 @@ defmodule Qontakwa.WA do
       }
     }
 
-    IO.inspect(url, label: "URL")
-    IO.inspect(headers, label: "HEADERS")
-
     Mojito.post(url, headers, Jason.encode!(payload))
   end
 end
