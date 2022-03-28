@@ -30,3 +30,5 @@ qontakwa-*.tar
 
 # VS Code settings
 /.vscode/
+
+.env
