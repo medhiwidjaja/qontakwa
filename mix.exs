@@ -22,7 +22,8 @@ defmodule Qontakwa.MixProject do
   defp deps do
     [
       {:mojito, "~> 0.7.10"},
-      {:bypass, "~> 2.1", only: :test}
+      {:bypass, "~> 2.1", only: :test},
+      {:jason, "~> 1.0"}
     ]
   end
 end
